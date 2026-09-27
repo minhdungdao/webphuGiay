@@ -9,7 +9,7 @@
   ];
   const nav = document.createElement('div');
   nav.className = 'site-nav';
-  nav.innerHTML = `<div class="site-nav__inner"><a class="site-brand" href="index.html"><img src="images/logoNew.jpg" alt="Logo Đan Hồn Việt"><span>Phủ Dầy<small>Đan Hồn Việt</small></span></a><button class="site-menu" type="button" aria-label="Mở menu" aria-expanded="false">☰</button><nav class="site-links" aria-label="Điều hướng chính">${links.map(([href,label]) => `<a href="${href}" ${page===href?'aria-current="page"':''}>${label}</a>`).join('')}<a class="site-nav__cta" href="lien-he.html">Kết nối với chúng tôi ↗</a></nav></div>`;
+  nav.innerHTML = `<div class="site-nav__inner"><a class="site-brand" href="index.html"><img src="images/logoNew.jpg" alt="Logo Đan Hồn Việt"><span>Phủ Dầy<small>Đan Hồn Việt</small></span></a><button class="site-menu" type="button" aria-label="Mở menu" aria-expanded="false">☰</button><nav class="site-links" aria-label="Điều hướng chính">${links.map(([href,label]) => `<a href="${href}" ${page===href?'aria-current="page"':''}>${label}</a>`).join('')}<a class="site-nav__cta" href="https://www.facebook.com/profile.php?id=61594814004023" target="_blank" rel="noopener noreferrer">Kết nối với chúng tôi ↗</a></nav></div>`;
   document.body.prepend(nav);
   nav.querySelector('.site-menu').addEventListener('click', e => {
     const open = nav.querySelector('.site-links').classList.toggle('is-open');
