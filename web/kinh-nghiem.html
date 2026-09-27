@@ -1,0 +1,2836 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kinh nghiệm đi lễ | Phủ Dầy</title>
+
+    <meta name="description"
+        content="Cẩm nang kinh nghiệm đi lễ Phủ Dầy: thời điểm, trang phục, lễ vật, trình tự hành lễ và những điều cần lưu ý.">
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           ROOT
+        ===================================================== */
+
+        :root {
+
+            --red: #8f1d22;
+            --red-dark: #651216;
+            --red-light: #a92d32;
+
+            --gold: #d4a84f;
+            --gold-light: #f1d58a;
+
+            --cream: #fbf5e7;
+            --cream-dark: #eee1c7;
+
+            --brown: #2b1714;
+
+            --text: #4d3831;
+            --text-light: #735e56;
+
+            --white: #ffffff;
+
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Be Vietnam Pro", sans-serif;
+
+            color: var(--text);
+
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(212,168,79,.08),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 90% 70%,
+                    rgba(143,29,34,.06),
+                    transparent 25%
+                ),
+                var(--cream);
+
+            line-height: 1.75;
+
+        }
+
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background:
+                rgba(43, 23, 20, .84);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid rgba(241,213,138,.25);
+
+        }
+
+
+        .navbar {
+
+            width: min(1180px, 92%);
+
+            height: 76px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: var(--gold-light);
+
+            text-decoration: none;
+
+        }
+
+
+        .logo-symbol {
+
+            width: 42px;
+            height: 42px;
+
+            border:
+                1px solid var(--gold);
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            font-size: 19px;
+
+        }
+
+
+        .logo-text {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+        }
+
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+
+        nav a {
+
+            position: relative;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: .3s;
+
+        }
+
+
+        nav a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -8px;
+
+            width: 0;
+
+            height: 1px;
+
+            background: var(--gold-light);
+
+            transition: .3s;
+
+        }
+
+
+        nav a:hover {
+
+            color: var(--gold-light);
+
+        }
+
+
+        nav a:hover::after {
+
+            width: 100%;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 720px;
+
+            height: 100vh;
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(43,23,20,.52),
+                    rgba(43,23,20,.78)
+                ),
+                url("images/phu-tien-huong.jpg")
+                center/cover no-repeat;
+
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    transparent 15%,
+                    rgba(0,0,0,.38) 100%
+                );
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: min(850px, 90%);
+
+            color: white;
+
+        }
+
+
+        .hero-label {
+
+            color: var(--gold-light);
+
+            text-transform: uppercase;
+
+            letter-spacing: 5px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(45px, 7vw, 80px);
+
+            line-height: 1.08;
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--gold-light);
+
+        }
+
+
+        .hero p {
+
+            max-width: 720px;
+
+            margin: auto;
+
+            color: rgba(255,255,255,.9);
+
+            font-size: 17px;
+
+            font-weight: 300;
+
+        }
+
+
+        .hero-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            margin-top: 36px;
+
+            padding: 14px 30px;
+
+            border:
+                1px solid var(--gold);
+
+            border-radius: 50px;
+
+            color: white;
+
+            text-decoration: none;
+
+            transition: .35s;
+
+        }
+
+
+        .hero-button:hover {
+
+            background: var(--gold);
+
+            color: var(--brown);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .scroll-down {
+
+            position: absolute;
+
+            bottom: 24px;
+
+            left: 50%;
+
+            z-index: 3;
+
+            transform: translateX(-50%);
+
+            color: var(--gold-light);
+
+            font-size: 25px;
+
+            animation: scrollDown 1.8s infinite;
+
+        }
+
+
+        @keyframes scrollDown {
+
+            0%,100% {
+                transform: translate(-50%,0);
+            }
+
+            50% {
+                transform: translate(-50%,10px);
+            }
+
+        }
+
+
+        /* =====================================================
+           COMMON
+        ===================================================== */
+
+        .section {
+
+            width: min(1180px, 92%);
+
+            margin: auto;
+
+            padding: 100px 0;
+
+        }
+
+
+        .section-heading {
+
+            max-width: 760px;
+
+            margin: 0 auto 60px;
+
+            text-align: center;
+
+        }
+
+
+        .section-label {
+
+            color: var(--red);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .section-heading h2 {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--brown);
+
+            font-size: clamp(34px, 5vw, 52px);
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .section-heading h2::after {
+
+            content: "✦";
+
+            display: block;
+
+            color: var(--gold);
+
+            font-size: 19px;
+
+            margin-top: 14px;
+
+        }
+
+
+        .section-heading p {
+
+            color: var(--text-light);
+
+        }
+
+
+        /* =====================================================
+           BEFORE GOING
+        ===================================================== */
+
+        .preparation-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        .preparation-card {
+
+            padding: 32px 24px;
+
+            background: rgba(255,255,255,.7);
+
+            border:
+
+                1px solid rgba(143,29,34,.08);
+
+            border-radius: 16px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px
+                rgba(70,30,20,.05);
+
+            transition: .35s;
+
+        }
+
+
+        .preparation-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(212,168,79,.55);
+
+            box-shadow:
+                0 18px 35px
+                rgba(70,30,20,.09);
+
+        }
+
+
+        .preparation-icon {
+
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 20px;
+
+            border:
+                1px solid var(--gold);
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            font-size: 27px;
+
+            background:
+                rgba(212,168,79,.07);
+
+        }
+
+
+        .preparation-card h3 {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--red-dark);
+
+            font-size: 23px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .preparation-card p {
+
+            color: var(--text-light);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           OFFERINGS
+        ===================================================== */
+
+        .offering-section {
+
+            background:
+                #f1e5cd;
+
+        }
+
+
+        .offering {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 65px;
+
+            align-items: center;
+
+        }
+
+
+        .offering-image {
+
+            height: 500px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 20px 45px
+                rgba(70,30,20,.12);
+
+        }
+
+
+        .offering-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .7s;
+
+        }
+
+
+        .offering-image:hover img {
+
+            transform: scale(1.06);
+
+        }
+
+
+        .offering-content h2 {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--red-dark);
+
+            font-size: 45px;
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .offering-content > p {
+
+            color: var(--text-light);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .offering-list {
+
+            display: grid;
+
+            gap: 10px;
+
+            margin-top: 22px;
+
+        }
+
+
+        .offering-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            padding: 13px 16px;
+
+            background: rgba(255,255,255,.75);
+
+            border-radius: 10px;
+
+        }
+
+
+        .offering-item-icon {
+
+            width: 35px;
+            height: 35px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            background: var(--red);
+
+            color: var(--gold-light);
+
+            font-size: 14px;
+
+        }
+
+
+        .offering-item span {
+
+            font-size: 14px;
+
+            color: #59463f;
+
+        }
+
+
+        .note-box {
+
+            margin-top: 24px;
+
+            padding: 20px 22px;
+
+            border-left:
+                3px solid var(--gold);
+
+            background:
+                rgba(255,255,255,.58);
+
+            color: var(--red-dark);
+
+            font-family: "Playfair Display", serif;
+
+            font-style: italic;
+
+        }
+
+
+        /* =====================================================
+           DRESS
+        ===================================================== */
+
+        .dress-section {
+
+            background: var(--red-dark);
+
+            color: white;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .dress-section::after {
+
+            content: "✦";
+
+            position: absolute;
+
+            right: -60px;
+
+            bottom: -170px;
+
+            color: var(--gold);
+
+            opacity: .035;
+
+            font-size: 430px;
+
+        }
+
+
+        .dress-section .section-heading {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .dress-section .section-label {
+
+            color: var(--gold-light);
+
+        }
+
+
+        .dress-section .section-heading h2 {
+
+            color: white;
+
+        }
+
+
+        .dress-section .section-heading p {
+
+            color: rgba(255,255,255,.72);
+
+        }
+
+
+        .dress-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 24px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .dress-card {
+
+            padding: 32px;
+
+            border:
+                1px solid rgba(239,214,141,.22);
+
+            border-radius: 16px;
+
+            background:
+                rgba(255,255,255,.045);
+
+        }
+
+
+        .dress-card h3 {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--gold-light);
+
+            font-size: 26px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .dress-card ul {
+
+            list-style: none;
+
+        }
+
+
+        .dress-card li {
+
+            padding: 9px 0;
+
+            color: rgba(255,255,255,.72);
+
+            font-size: 14px;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.08);
+
+        }
+
+
+        .dress-card li:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .dress-card li::before {
+
+            content: "✦";
+
+            color: var(--gold);
+
+            margin-right: 10px;
+
+        }
+
+
+        /* =====================================================
+           CEREMONY PROCESS
+        ===================================================== */
+
+        .process-wrapper {
+
+            width: min(900px, 92%);
+
+            margin: 60px auto 0;
+
+        }
+
+
+        .process-item {
+
+            display: grid;
+
+            grid-template-columns:
+                90px 1fr;
+
+            gap: 25px;
+
+            position: relative;
+
+            padding-bottom: 42px;
+
+        }
+
+
+        .process-item:not(:last-child)::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 44px;
+
+            top: 68px;
+
+            width: 1px;
+
+            height: calc(100% - 68px);
+
+            background:
+                rgba(143,29,34,.22);
+
+        }
+
+
+        .process-number {
+
+            width: 68px;
+            height: 68px;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            background: var(--red);
+
+            color: var(--gold-light);
+
+            border:
+                2px solid var(--gold);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 21px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .process-content {
+
+            padding-top: 4px;
+
+        }
+
+
+        .process-content h3 {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--red-dark);
+
+            font-size: 27px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .process-content p {
+
+            color: var(--text-light);
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           DOS & DON'TS
+        ===================================================== */
+
+        .rules-section {
+
+            background:
+                linear-gradient(
+                    rgba(43,20,17,.90),
+                    rgba(43,20,17,.96)
+                ),
+                url("images/phu-van-cat.jpg")
+                center/cover no-repeat;
+
+        }
+
+
+        .rules-section .section-label {
+
+            color: var(--gold-light);
+
+        }
+
+
+        .rules-section .section-heading h2 {
+
+            color: white;
+
+        }
+
+
+        .rules-section .section-heading p {
+
+            color: rgba(255,255,255,.72);
+
+        }
+
+
+        .rules-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+
+        }
+
+
+        .rule-card {
+
+            padding: 34px 30px;
+
+            border-radius: 16px;
+
+            background:
+                rgba(255,255,255,.055);
+
+            border:
+                1px solid rgba(239,214,141,.2);
+
+        }
+
+
+        .rule-card h3 {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--gold-light);
+
+            font-size: 27px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .rule-list {
+
+            list-style: none;
+
+        }
+
+
+        .rule-list li {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            color: rgba(255,255,255,.76);
+
+            font-size: 14px;
+
+            padding: 10px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,.08);
+
+        }
+
+
+        .rule-list li:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .rule-icon {
+
+            color: var(--gold);
+
+            font-size: 16px;
+
+            margin-top: 2px;
+
+        }
+
+
+        /* =====================================================
+           FESTIVAL
+        ===================================================== */
+
+        .festival {
+
+            padding: 105px 20px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    rgba(143,29,34,.88),
+                    rgba(101,18,22,.94)
+                ),
+                url("images/phu-van-cat.jpg")
+                center/cover no-repeat;
+
+            color: white;
+
+        }
+
+
+        .festival-inner {
+
+            max-width: 850px;
+
+            margin: auto;
+
+        }
+
+
+        .festival-symbol {
+
+            color: var(--gold-light);
+
+            font-size: 27px;
+
+            letter-spacing: 12px;
+
+            margin-bottom: 16px;
+
+        }
+
+
+        .festival-label {
+
+            color: var(--gold-light);
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+        }
+
+
+        .festival h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(37px,5vw,56px);
+
+            line-height: 1.2;
+
+            margin: 12px 0 20px;
+
+        }
+
+
+        .festival p {
+
+            color: rgba(255,255,255,.8);
+
+            font-size: 15px;
+
+        }
+
+
+        .festival-button {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 13px 28px;
+
+            border:
+                1px solid var(--gold-light);
+
+            border-radius: 50px;
+
+            color: white;
+
+            text-decoration: none;
+
+            transition: .3s;
+
+        }
+
+
+        .festival-button:hover {
+
+            background: var(--gold-light);
+
+            color: var(--red-dark);
+
+        }
+
+
+        /* =====================================================
+           ONE DAY ITINERARY
+        ===================================================== */
+
+        .day-plan {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .day-image {
+
+            height: 520px;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 20px 45px
+                rgba(70,30,20,.13);
+
+        }
+
+
+        .day-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .7s;
+
+        }
+
+
+        .day-image:hover img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        .timeline {
+
+            position: relative;
+
+            padding-left: 35px;
+
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 7px;
+
+            top: 10px;
+
+            bottom: 10px;
+
+            width: 1px;
+
+            background:
+                rgba(143,29,34,.25);
+
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            padding: 0 0 25px 25px;
+
+        }
+
+
+        .timeline-item:last-child {
+
+            padding-bottom: 0;
+
+        }
+
+
+        .timeline-item::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: -2px;
+
+            top: 5px;
+
+            width: 17px;
+
+            height: 17px;
+
+            border-radius: 50%;
+
+            background: var(--red);
+
+            border:
+                3px solid var(--cream);
+
+            box-shadow:
+                0 0 0 1px var(--gold);
+
+        }
+
+
+        .timeline-time {
+
+            color: var(--red);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 2px;
+
+        }
+
+
+        .timeline-item h3 {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--red-dark);
+
+            font-size: 22px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .timeline-item p {
+
+            color: var(--text-light);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           FINAL CTA
+        ===================================================== */
+
+        .final-cta {
+
+            padding: 100px 20px;
+
+            text-align: center;
+
+            background: var(--cream-dark);
+
+        }
+
+
+        .final-cta-inner {
+
+            max-width: 800px;
+
+            margin: auto;
+
+        }
+
+
+        .final-cta-symbol {
+
+            color: var(--gold);
+
+            font-size: 26px;
+
+            letter-spacing: 10px;
+
+        }
+
+
+        .final-cta h2 {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--red-dark);
+
+            font-size: clamp(35px,5vw,52px);
+
+            line-height: 1.2;
+
+            margin: 15px 0;
+
+        }
+
+
+        .final-cta p {
+
+            color: var(--text-light);
+
+            max-width: 680px;
+
+            margin: auto;
+
+        }
+
+
+        .final-button {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 13px 30px;
+
+            background: var(--red);
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 50px;
+
+            transition: .3s;
+
+        }
+
+
+        .final-button:hover {
+
+            background: var(--red-dark);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background: #2b1714;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 55px 20px;
+
+        }
+
+
+        .footer-logo {
+
+            font-family: "Playfair Display", serif;
+
+            color: var(--gold-light);
+
+            font-size: 30px;
+
+        }
+
+
+        .footer-line {
+
+            width: 80px;
+
+            height: 1px;
+
+            background: var(--gold);
+
+            margin: 20px auto;
+
+        }
+
+
+        footer p {
+
+            color: rgba(255,255,255,.58);
+
+            font-size: 13px;
+
+            margin: 3px 0;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .preparation-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .offering,
+            .day-plan {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .offering-image,
+            .day-image {
+
+                height: 400px;
+
+            }
+
+        }
+
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+
+            .dress-grid,
+            .rules-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .ceremony-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+
+                min-height: 680px;
+
+            }
+
+
+            .hero p {
+
+                font-size: 15px;
+
+            }
+
+
+            .section {
+
+                padding: 70px 0;
+
+            }
+
+
+            .preparation-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .offering-image {
+
+                height: 300px;
+
+            }
+
+
+            .day-image {
+
+                height: 300px;
+
+            }
+
+
+            .offering-content h2 {
+
+                font-size: 38px;
+
+            }
+
+
+            .process-item {
+
+                grid-template-columns:
+                    65px 1fr;
+
+                gap: 18px;
+
+            }
+
+
+            .process-number {
+
+                width: 56px;
+                height: 56px;
+
+                font-size: 17px;
+
+            }
+
+
+            .process-item:not(:last-child)::after {
+
+                left: 28px;
+
+                top: 56px;
+
+            }
+
+
+            .process-content h3 {
+
+                font-size: 23px;
+
+            }
+
+
+            .timeline {
+
+                padding-left: 30px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <div class="logo-symbol">
+                ✦
+            </div>
+
+            <div class="logo-text">
+                Phủ Dầy
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                Trang chủ
+            </a>
+
+            <a href="quy-the-di-tich.html">
+                Di tích
+            </a>
+
+            <a href="nghi-le-hau-dong.html">
+                Nghi lễ
+            </a>
+
+            <a href="#chuan-bi">
+                Kinh nghiệm
+            </a>
+
+            <a href="#hanh-trinh">
+                Hành trình
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            Cẩm nang về Phủ Dầy
+        </div>
+
+
+        <h1>
+
+            Kinh nghiệm
+            <br>
+
+            <span>đi lễ Phủ Dầy</span>
+
+        </h1>
+
+
+        <p>
+
+            Những điều cần biết về thời điểm, trang phục,
+            lễ vật, trình tự hành lễ và cách ứng xử khi
+            về với không gian văn hóa tâm linh Phủ Dầy.
+
+        </p>
+
+
+        <a
+            href="#chuan-bi"
+            class="hero-button"
+        >
+            Xem hướng dẫn &nbsp; ↓
+        </a>
+
+    </div>
+
+
+    <div class="scroll-down">
+        ⌄
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHUẨN BỊ
+===================================================== -->
+
+<section
+    class="section"
+    id="chuan-bi"
+>
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Trước khi về Phủ Dầy
+        </div>
+
+
+        <h2>
+
+            Chuẩn bị cho một
+            <br>
+            chuyến đi trọn vẹn
+
+        </h2>
+
+
+        <p>
+
+            Một chút chuẩn bị trước chuyến đi sẽ giúp bạn
+            chủ động hơn khi tham quan và thực hành tín ngưỡng
+            trong không gian di tích.
+
+        </p>
+
+    </div>
+
+
+    <div class="preparation-grid">
+
+
+        <article class="preparation-card">
+
+            <div class="preparation-icon">
+                🗓️
+            </div>
+
+
+            <h3>
+                Chọn thời gian
+            </h3>
+
+
+            <p>
+
+                Tìm hiểu trước thời điểm muốn đến,
+                đặc biệt nếu bạn muốn trải nghiệm
+                không khí lễ hội.
+
+            </p>
+
+        </article>
+
+
+        <article class="preparation-card">
+
+            <div class="preparation-icon">
+                👘
+            </div>
+
+
+            <h3>
+                Trang phục
+            </h3>
+
+
+            <p>
+
+                Ưu tiên trang phục lịch sự,
+                kín đáo và phù hợp với không gian
+                thờ tự.
+
+            </p>
+
+        </article>
+
+
+        <article class="preparation-card">
+
+            <div class="preparation-icon">
+                🪷
+            </div>
+
+
+            <h3>
+                Chuẩn bị lễ
+            </h3>
+
+
+            <p>
+
+                Có thể chuẩn bị hương, hoa,
+                quả và những lễ vật phù hợp
+                tùy theo điều kiện.
+
+            </p>
+
+        </article>
+
+
+        <article class="preparation-card">
+
+            <div class="preparation-icon">
+                🧭
+            </div>
+
+
+            <h3>
+                Lộ trình
+            </h3>
+
+
+            <p>
+
+                Tìm hiểu trước các điểm di tích
+                để sắp xếp thời gian tham quan
+                hợp lý.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SẮM LỄ
+===================================================== -->
+
+<section class="offering-section">
+
+    <div class="section">
+
+        <div class="offering">
+
+
+            <div class="offering-image">
+
+                <img
+                    src="images/phu-tien-huong.jpg"
+                    alt="Không gian Phủ Tiên Hương"
+                >
+
+            </div>
+
+
+            <div class="offering-content">
+
+                <div class="section-label">
+                    Chuẩn bị lễ vật
+                </div>
+
+
+                <h2>
+                    Sắm lễ như thế nào?
+                </h2>
+
+
+                <p>
+
+                    Lễ vật khi đi lễ có thể được chuẩn bị
+                    tùy theo điều kiện và lòng thành của mỗi người.
+                    Không nhất thiết phải cầu kỳ hay nhiều lễ vật.
+
+                </p>
+
+
+                <div class="offering-list">
+
+
+                    <div class="offering-item">
+
+                        <div class="offering-item-icon">
+                            ✦
+                        </div>
+
+                        <span>
+                            Hương
+                        </span>
+
+                    </div>
+
+
+                    <div class="offering-item">
+
+                        <div class="offering-item-icon">
+                            ✦
+                        </div>
+
+                        <span>
+                            Hoa tươi
+                        </span>
+
+                    </div>
+
+
+                    <div class="offering-item">
+
+                        <div class="offering-item-icon">
+                            ✦
+                        </div>
+
+                        <span>
+                            Trầu cau
+                        </span>
+
+                    </div>
+
+
+                    <div class="offering-item">
+
+                        <div class="offering-item-icon">
+                            ✦
+                        </div>
+
+                        <span>
+                            Nước và hoa quả
+                        </span>
+
+                    </div>
+
+
+                    <div class="offering-item">
+
+                        <div class="offering-item-icon">
+                            ✦
+                        </div>
+
+                        <span>
+                            Lễ vật khác tùy tâm
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="note-box">
+
+                    “Đi lễ cốt ở lòng thành.”
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TRANG PHỤC
+===================================================== -->
+
+<section class="dress-section">
+
+    <div class="section">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Văn hóa ứng xử
+            </div>
+
+
+            <h2>
+
+                Trang phục & thái độ
+                <br>
+                khi đi lễ
+
+            </h2>
+
+
+            <p>
+
+                Không gian thờ tự là nơi cần sự trang nghiêm.
+                Việc lựa chọn trang phục và cách ứng xử phù hợp
+                góp phần giữ gìn vẻ đẹp của di tích.
+
+            </p>
+
+        </div>
+
+
+        <div class="dress-grid">
+
+
+            <div class="dress-card">
+
+                <h3>
+                    👘 Nên
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        Mặc trang phục lịch sự, kín đáo
+                    </li>
+
+                    <li>
+                        Ưu tiên quần áo gọn gàng, thoải mái
+                    </li>
+
+                    <li>
+                        Giữ thái độ nhẹ nhàng, thành kính
+                    </li>
+
+                    <li>
+                        Tuân thủ hướng dẫn tại di tích
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="dress-card">
+
+                <h3>
+                    ✦ Lưu ý
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        Tránh trang phục quá ngắn hoặc phản cảm
+                    </li>
+
+                    <li>
+                        Không gây ồn ào trong khu vực thờ tự
+                    </li>
+
+                    <li>
+                        Tôn trọng người đang thực hành nghi lễ
+                    </li>
+
+                    <li>
+                        Giữ gìn vệ sinh và cảnh quan chung
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TRÌNH TỰ
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Hành lễ
+        </div>
+
+
+        <h2>
+
+            Trình tự tham khảo
+            <br>
+            khi đi lễ
+
+        </h2>
+
+
+        <p>
+
+            Trình tự dưới đây mang tính tham khảo.
+            Khi đến thực tế, bạn nên tuân theo hướng dẫn
+            và quy định tại từng điểm thờ tự.
+
+        </p>
+
+    </div>
+
+
+    <div class="process-wrapper">
+
+
+        <div class="process-item">
+
+            <div class="process-number">
+                01
+            </div>
+
+
+            <div class="process-content">
+
+                <h3>
+                    Vào không gian di tích
+                </h3>
+
+
+                <p>
+
+                    Giữ thái độ trang nghiêm, quan sát
+                    các biển hướng dẫn và quy định tại
+                    khu vực tham quan.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="process-item">
+
+            <div class="process-number">
+                02
+            </div>
+
+
+            <div class="process-content">
+
+                <h3>
+                    Chuẩn bị lễ
+                </h3>
+
+
+                <p>
+
+                    Sắp xếp lễ vật gọn gàng và chuẩn bị
+                    hương theo hướng dẫn của nơi thờ tự.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="process-item">
+
+            <div class="process-number">
+                03
+            </div>
+
+
+            <div class="process-content">
+
+                <h3>
+                    Dâng hương, hành lễ
+                </h3>
+
+
+                <p>
+
+                    Thực hiện việc dâng hương và hành lễ
+                    theo phong tục, quy định và hướng dẫn
+                    tại từng nơi.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="process-item">
+
+            <div class="process-number">
+                04
+            </div>
+
+
+            <div class="process-content">
+
+                <h3>
+                    Tham quan di tích
+                </h3>
+
+
+                <p>
+
+                    Sau khi hành lễ, bạn có thể dành thời gian
+                    tìm hiểu kiến trúc, lịch sử và giá trị văn hóa
+                    của quần thể Phủ Dầy.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NÊN / KHÔNG NÊN
+===================================================== -->
+
+<section class="rules-section">
+
+    <div class="section">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Văn minh nơi di tích
+            </div>
+
+
+            <h2>
+                Những điều nên lưu ý
+            </h2>
+
+
+            <p>
+
+                Một hành trình đẹp không chỉ nằm ở việc
+                tham quan mà còn ở cách chúng ta cùng nhau
+                gìn giữ không gian văn hóa.
+
+            </p>
+
+        </div>
+
+
+        <div class="rules-grid">
+
+
+            <div class="rule-card">
+
+                <h3>
+                    ✓ Nên làm
+                </h3>
+
+
+                <ul class="rule-list">
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Ăn mặc lịch sự và giữ thái độ trang nghiêm.
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Giữ trật tự trong khu vực thờ tự.
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Xếp hàng và nhường lối cho người khác khi cần.
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Giữ gìn vệ sinh và cảnh quan di tích.
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Tôn trọng người đang thực hành nghi lễ.
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="rule-card">
+
+                <h3>
+                    × Không nên
+                </h3>
+
+
+                <ul class="rule-list">
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Chen lấn hoặc gây mất trật tự.
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Tự ý chạm vào đồ thờ hoặc hiện vật.
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Xả rác trong khuôn viên di tích.
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Chụp ảnh tại nơi có quy định hạn chế.
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="rule-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            Làm ảnh hưởng đến người đang hành lễ.
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MÙA LỄ HỘI
+===================================================== -->
+
+<section class="festival">
+
+    <div class="festival-inner">
+
+
+        <div class="festival-symbol">
+            ✦ ✦ ✦
+        </div>
+
+
+        <div class="festival-label">
+            Trải nghiệm văn hóa
+        </div>
+
+
+        <h2>
+            Nếu đến Phủ Dầy vào
+            mùa lễ hội
+        </h2>
+
+
+        <p>
+
+            Mùa lễ hội mang đến không khí đặc biệt với các hoạt động
+            tín ngưỡng, văn hóa và sinh hoạt cộng đồng. Nếu lựa chọn
+            thời điểm này, bạn nên chủ động tìm hiểu lịch hoạt động,
+            chuẩn bị thời gian và lưu ý lượng khách đông.
+
+        </p>
+
+
+        <a
+            href="#hanh-trinh"
+            class="festival-button"
+        >
+            Xem hành trình tham khảo →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MỘT NGÀY Ở PHỦ DẦY
+===================================================== -->
+
+<section
+    class="section"
+    id="hanh-trinh"
+>
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Gợi ý tham khảo
+        </div>
+
+
+        <h2>
+
+            Một ngày
+            <br>
+            ở Phủ Dầy
+
+        </h2>
+
+
+        <p>
+
+            Lịch trình dưới đây chỉ mang tính gợi ý.
+            Bạn có thể điều chỉnh theo thời gian, nhu cầu
+            và điều kiện thực tế.
+
+        </p>
+
+    </div>
+
+
+    <div class="day-plan">
+
+
+        <div class="day-image">
+
+            <img
+                src="images/phu-van-cat.jpg"
+                alt="Phủ Vân Cát"
+            >
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-time">
+                    07:00
+                </div>
+
+                <h3>
+                    Đến Phủ Dầy
+                </h3>
+
+                <p>
+                    Bắt đầu hành trình và chuẩn bị cho việc tham quan,
+                    hành lễ.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-time">
+                    07:30
+                </div>
+
+                <h3>
+                    Phủ Tiên Hương
+                </h3>
+
+                <p>
+                    Tìm hiểu không gian kiến trúc và thực hành tín ngưỡng
+                    tại phủ chính.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-time">
+                    09:00
+                </div>
+
+                <h3>
+                    Lăng Mẫu Liễu Hạnh
+                </h3>
+
+                <p>
+                    Tham quan công trình và tìm hiểu về Thánh Mẫu
+                    Liễu Hạnh.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-time">
+                    10:00
+                </div>
+
+                <h3>
+                    Phủ Vân Cát
+                </h3>
+
+                <p>
+                    Tiếp tục khám phá một trong những công trình
+                    tiêu biểu của quần thể.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-time">
+                    13:30
+                </div>
+
+                <h3>
+                    Khám phá thêm
+                </h3>
+
+                <p>
+                    Dành thời gian tìm hiểu các điểm di tích và
+                    không gian văn hóa xung quanh.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-time">
+                    15:30
+                </div>
+
+                <h3>
+                    Kết thúc hành trình
+                </h3>
+
+                <p>
+                    Kiểm tra lại đồ dùng cá nhân và rời khu di tích
+                    trong không khí nhẹ nhàng, văn minh.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="final-cta">
+
+    <div class="final-cta-inner">
+
+
+        <div class="final-cta-symbol">
+            ✦ ✦ ✦
+        </div>
+
+
+        <h2>
+
+            Về Phủ Dầy
+            <br>
+            bằng lòng thành
+
+        </h2>
+
+
+        <p>
+
+            Một chuyến đi về với Phủ Dầy không chỉ là hành trình
+            tham quan một quần thể di tích, mà còn là dịp tìm hiểu
+            những giá trị văn hóa, tín ngưỡng và ký ức cộng đồng
+            được gìn giữ qua nhiều thế hệ.
+
+        </p>
+
+
+        <a
+            href="quy-the-di-tich.html"
+            class="final-button"
+        >
+            Khám phá quần thể di tích →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        ✦ Phủ Dầy ✦
+    </div>
+
+
+    <div class="footer-line"></div>
+
+
+    <p>
+        Quần thể di tích Phủ Dầy
+    </p>
+
+
+    <p>
+        Kinh nghiệm đi lễ · Văn hóa tín ngưỡng Việt Nam
+    </p>
+
+</footer>
+
+
+</body>
+</html>
+```
