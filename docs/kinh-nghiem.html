@@ -1722,6 +1722,17 @@
     </style>
 
 <link rel="stylesheet" href="site.css">
+<style>
+/* Keep this page's opening panel the same height and image as the home page. */
+body[data-page="guide"] .hero {
+    height: 580px !important;
+    min-height: 580px !important;
+    background: linear-gradient(90deg, rgba(30,17,17,.78), rgba(30,17,17,.38)), url('images/Phu-Day-4.jpg') center 46% / cover no-repeat !important;
+}
+@media (max-width: 680px) {
+    body[data-page="guide"] .hero { height: 520px !important; min-height: 520px !important; }
+}
+</style>
 </head>
 
 
