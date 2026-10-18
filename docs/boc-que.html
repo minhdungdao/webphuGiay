@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Quẻ May Mắn - Phủ Dầy Heritage</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome cho Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-red: #3e0606;
+            --card-red: #240303;
+            --gold-primary: #D4AF37;
+            --gold-bright: #FDF0A6;
+            --cream-paper: #FFFDF7;
+            --border-gold: rgba(212, 175, 55, 0.4);
+        }
+
+        body {
+            background: radial-gradient(circle at center, #520909 0%, #200202 100%);
+            color: #f1f5f9;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        /* Navbar Header */
+        .navbar-custom {
+            background: rgba(32, 2, 2, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-gold);
+            padding: 10px 0;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .brand-logo-img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1.5px solid var(--gold-primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            margin-right: 12px;
+        }
+
+        .brand-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .brand-main-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            letter-spacing: 0.5px;
+        }
+
+        .brand-sub-slogan {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--gold-primary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        .nav-link-custom {
+            color: #e2e8f0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.2s ease;
+            text-decoration: none;
+        }
+
+        .nav-link-custom:hover {
+            color: var(--gold-bright);
+        }
+
+        .btn-header-cta {
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-bright);
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 20px;
+            padding: 6px 18px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-header-cta:hover {
+            background: var(--gold-primary);
+            color: #1a0202;
+        }
+
+        /* Hero Banner */
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--border-gold);
+            color: var(--gold-bright);
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            padding: 4px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--gold-bright);
+            letter-spacing: 2px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #f1f5f9;
+        }
+
+        .hero-banner-img {
+            border: 2px solid var(--gold-primary);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+        }
+
+        .hero-banner-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Khung điều khiển Bốc quẻ */
+        .control-card {
+            background: rgba(28, 3, 3, 0.85);
+            border: 1px solid var(--border-gold);
+            border-radius: 20px;
+            padding: 35px 25px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(12px);
+        }
+
+        .control-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+        }
+
+        .form-control-custom {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-gold);
+            color: #ffffff;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 10px;
+            height: 46px;
+        }
+
+        .form-control-custom:focus {
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            border-color: var(--gold-bright);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
+            color: #100101;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            height: 46px;
+            padding: 0 22px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #FDF0A6 0%, #D4AF37 100%);
+            transform: translateY(-2px);
+        }
+
+        .btn-red {
+            background: rgba(168, 28, 28, 0.3);
+            color: #ff8e8e;
+            font-weight: 600;
+            border: 1px solid rgba(168, 28, 28, 0.6);
+            border-radius: 10px;
+            height: 46px;
+            padding: 0 22px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-red:hover {
+            background: #A81C1C;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .tag-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            color: #e2e8f0;
+            font-size: 0.8rem;
+            border-radius: 20px;
+            padding: 4px 14px;
+            margin: 3px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .tag-btn:hover {
+            background: var(--gold-primary);
+            color: #120101;
+            font-weight: 600;
+            border-color: var(--gold-bright);
+        }
+
+        /* ------------------------------------------------------------- */
+        /* THIẾT KẾ THẺ QUẺ BÀI CHỨA ẢNH THEO ĐÚNG HÌNH BẠN GỬI */
+        /* ------------------------------------------------------------- */
+        .que-result-card {
+            background: var(--cream-paper);
+            border: 3px solid var(--gold-primary);
+            outline: 2px solid #A81C1C;
+            border-radius: 20px;
+            padding: 30px 20px;
+            max-width: 440px;
+            margin: 30px auto 0 auto;
+            color: #2b0404;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 25px rgba(212, 175, 55, 0.3);
+            animation: flipIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .que-tag-badge {
+            background: linear-gradient(180deg, #A81C1C 0%, #520909 100%);
+            color: var(--gold-bright);
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 6px 24px;
+            border-radius: 25px;
+            border: 1px solid var(--gold-primary);
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .que-subtext {
+            font-size: 0.75rem;
+            color: #7a1a1a;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* KHUNG CHỨA HÌNH ẢNH CỦA THẺ QUẺ[cite: 14] */
+        .que-image-frame {
+            width: 100%;
+            height: 220px; /* Chiều cao vừa vặn cho ô ảnh */
+            border: 2px solid #240303;
+            border-radius: 14px;
+            overflow: hidden;
+            margin: 15px 0;
+            background: #1e0303;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .que-image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Giúp hình ảnh vừa vặn khung ảnh */
+            display: block;
+        }
+
+        .que-poem-box {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #5c0b0b;
+            line-height: 1.7;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .que-ynhia-box {
+            background: rgba(168, 28, 28, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 3px solid #A81C1C;
+            text-align: left;
+            font-size: 0.92rem;
+            color: #3b0505;
+            line-height: 1.6;
+        }
+
+        @keyframes flipIn {
+            from { opacity: 0; transform: rotateY(80deg) scale(0.9); }
+            to { opacity: 1; transform: rotateY(0deg) scale(1); }
+        }
+
+        .shake-anim {
+            animation: shake 0.6s ease-in-out infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            20% { transform: rotate(-12deg); }
+            40% { transform: rotate(12deg); }
+            60% { transform: rotate(-8deg); }
+            80% { transform: rotate(8deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. NAVBAR FIXED TOP -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="brand-container" href="index.html">
+                <img src="images/logoNew.jpg" alt="Logo Phủ Dầy" class="brand-logo-img">
+                <div class="brand-text-group">
+                    <span class="brand-main-name">Phủ Dầy</span>
+                    <span class="brand-sub-slogan">ĐAN HỒN VIỆT</span>
+                </div>
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                <a href="index.html" class="nav-link-custom me-3"><i class="fa-solid fa-house me-1"></i> Trang Chủ</a>
+                <a href="#boc-que-section" class="btn btn-header-cta"><i class="fa-solid fa-scroll me-1"></i> Thỉnh Lộc Mẫu</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO BANNER -->
+    <div class="container text-center my-4">
+        <div class="hero-badge mb-2">✦ LỄ HỘI PHỦ DẦY • VỤ BẢN NAM ĐỊNH ✦</div>
+        <h1 class="hero-title mb-2">15 Quẻ May Mắn</h1>
+        <p class="hero-subtitle mb-2">Lễ Hội Phủ Dầy • Vụ Bản Nam Định</p>
+        <p class="fst-italic opacity-75 small">— Đồng hành cùng bạn trên hành trình học tập, công việc và cuộc sống —</p>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-10">
+                <div class="hero-banner-img">
+                    <img src="images/bocque.jpg" alt="15 Quẻ May Mắn Phủ Dầy">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. BẢNG ĐIỀU KHIỂN BỐC QUẺ -->
+    <div id="boc-que-section" class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <div class="control-card">
+                    <div class="small text-warning text-uppercase letter-spacing-2 mb-1">✦ THỈNH Ý LỘC MẪU ✦</div>
+                    <h2 class="control-title mb-2">Nhập Số Quẻ Của Bạn</h2>
+                    <p class="small text-light opacity-75 mb-4">Nhập số quẻ từ <strong>01 đến 15</strong> bạn đã rút được tại đền, hoặc nhấn nút thỉnh quẻ ngẫu nhiên để nhận lời chúc và chỉ dẫn tâm linh.</p>
+
+                    
+                    <div class="row justify-content-center g-2 mb-4">
+                        <div class="col-sm-3">
+                            <input type="number" id="queInput" class="form-control form-control-custom" placeholder="Số quẻ #" min="1" max="15">
+                        </div>
+                        <div class="col-sm-auto">
+                            <button onclick="traQueTheoSo()" class="btn btn-gold w-100">
+                                <i class="fa-solid fa-magnifying-glass me-1"></i> Tra Quẻ Số
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="button" id="randomQueButton" onclick="bocNgauNhien()" class="btn btn-gold mb-3">
+                        <i id="ongXamIcon" class="fa-solid fa-scroll me-1" aria-hidden="true"></i> Thỉnh quẻ ngẫu nhiên
+                    </button>
+
+                    <!-- Hàng Nút Chọn Nhanh -->
+                    <div class="border-top border-secondary pt-3 mt-3">
+                        <div class="small text-warning mb-2"><i class="fa-solid fa-list-check me-1"></i> Chọn nhanh thẻ quẻ (01 - 15):</div>
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <span onclick="clickTag(1)" class="tag-btn">01. Khai Trí</span>
+                            <span onclick="clickTag(2)" class="tag-btn">02. Đồng Tâm</span>
+                            <span onclick="clickTag(3)" class="tag-btn">03. Kiên Định</span>
+                            <span onclick="clickTag(4)" class="tag-btn">04. Minh Mẫn</span>
+                            <span onclick="clickTag(5)" class="tag-btn">05. An Yên</span>
+                            <span onclick="clickTag(6)" class="tag-btn">06. Tự Tại</span>
+                            <span onclick="clickTag(7)" class="tag-btn">07. Thanh Tân</span>
+                            <span onclick="clickTag(8)" class="tag-btn">08. Gieo Duyên</span>
+                            <span onclick="clickTag(9)" class="tag-btn">09. Nhu Thuận</span>
+                            <span onclick="clickTag(10)" class="tag-btn">10. Tương Ngộ</span>
+                            <span onclick="clickTag(11)" class="tag-btn">11. Trực Giác</span>
+                            <span onclick="clickTag(12)" class="tag-btn">12. Đắc Lợi</span>
+                            <span onclick="clickTag(13)" class="tag-btn">13. Vững Chãi</span>
+                            <span onclick="clickTag(14)" class="tag-btn">14. Lộc May</span>
+                            <span onclick="clickTag(15)" class="tag-btn">15. Đại Cát</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. KHU VỰC HIỂN THỊ THẺ QUẺ ĐƠN LẬP[cite: 14] -->
+                <div id="resultWrapper" class="d-none mt-4">
+                    <div class="text-warning small text-uppercase letter-spacing-2 mb-2">✦ THẺ QUẺ PHỤNG NGHINH • ĐỆ NHẤT THÁNH MẪU ✦</div>
+                    
+                    <div class="que-result-card text-center">
+                        <div class="que-tag-badge" id="cardTitle">QUẺ 01 - KHAI TRÍ</div>
+                        <div class="que-subtext mt-2 mb-2">✦ ĐỀN MẪU PHỦ DẦY • NAM ĐỊNH ✦</div>
+
+                        <!-- KHUNG ẢNH CỦA THẺ QUẺ[cite: 14] -->
+                        <div class="que-image-frame">
+                            <img id="cardImage" src="ImageForCard/anh_01.png" alt="Thẻ Quẻ May Mắn">
+                        </div>
+
+                        <!-- BÀI THƠ QUẺ -->
+                        <div class="que-poem-box" id="cardPoem">
+                            "Bút nghiêng dốc sức bao ngày<br>Thi cử rạng rỡ, thẳng đường tiến thân."
+                        </div>
+
+                        <!-- Ý NGHĨA QUẺ -->
+                        <div class="que-ynhia-box">
+                            <strong class="text-danger d-block mb-1"><i class="fa-solid fa-star me-1"></i> Ý NGHĨA QUẺ:</strong>
+                            <span id="cardMeaning">Trí tuệ hanh thông, đồ án và bài thi kỳ này đạt kết quả cao. Sự chăm chỉ bấy lâu chuẩn bị gặt hái trái ngọt.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script dữ liệu 15 Quẻ kèm đường dẫn ảnh -->
+    <script>
+        const dataQue = {
+            1: {
+                ten: "QUẺ 01 - KHAI TRÍ",
+                img: "ImageForCard/anh_01.png",
+                tho: "Bút nghiêng dốc sức bao ngày<br>Thi cử rạng rỡ, thẳng đường tiến thân.",
+                ynhia: "Trí tuệ hanh thông, đồ án và bài thi kỳ này đạt kết quả cao. Sự chăm chỉ bấy lâu chuẩn bị gặt hái trái ngọt."
+            },
+            2: {
+                ten: "QUẺ 02 - ĐỒNG TÂM",
+                img: "ImageForCard/anh_02.png",
+                tho: "Đồng đội chung sức vượt ghềnh<br>Deadline nhẹ gánh, việc gì cũng thành.",
+                ynhia: "Gặp quý nhân phù trợ trong học tập, nhóm làm việc ăn ý, vượt qua giai đoạn dồn dập một cách thuận lợi."
+            },
+            3: {
+                ten: "QUẺ 03 - KIÊN ĐỊNH",
+                img: "ImageForCard/anh_03.png",
+                tho: "Mặc cho sóng gió bủa giăng<br>Vững tâm giữ lái, tới ngày bình yên.",
+                ynhia: "Lời nhắc giữ vững mục tiêu ban đầu. Những nỗ lực thầm lặng sẽ sớm được công nhận xứng đáng."
+            },
+            4: {
+                ten: "QUẺ 04 - MINH MẪN",
+                img: "ImageForCard/anh_04.png",
+                tho: "Sáng lòng tỏ dạ tinh thông<br>Mọi điều trắc trở hóa không trong lành.",
+                ynhia: "Giữ được sự tỉnh táo trước các quyết định quan trọng, dễ dàng gỡ rối các khúc mắc công việc còn tồn đọng."
+            },
+            5: {
+                ten: "QUẺ 05 - AN YÊN",
+                img: "ImageForCard/anh_05.png",
+                tho: "Cỏ cây xanh mát đầu cành<br>Gác buông phiền muộn, lòng mình thanh thơi.",
+                ynhia: "Sức khỏe và tinh thần đang hồi phục tốt. Đừng quá khắt khe với bản thân, hãy dành một ngày nghỉ ngơi trọn vẹn."
+            },
+            6: {
+                ten: "QUẺ 06 - TỰ TẠI",
+                img: "ImageForCard/anh_06.png",
+                tho: "Mỗi hoa một sắc một hương<br>So đo chi lắm cho vương vấn lòng.",
+                ynhia: "Tôn trọng nhịp phát triển của riêng mình. Không cần vội vã so sánh bước tiến của bản thân với bất kỳ ai khác."
+            },
+            7: {
+                ten: "QUẺ 07 - THANH TÂN",
+                img: "ImageForCard/anh_07.png",
+                tho: "Rừng sâu đón gió mát lành<br>Nạp nguồn năng lượng, tiến nhanh bước dài.",
+                ynhia: "Nguồn cảm hứng sáng tạo dồi dào quay trở lại, thích hợp để bắt đầu những dự định mới mẻ."
+            },
+            8: {
+                ten: "QUẺ 08 - GIEO DUYÊN",
+                img: "ImageForCard/anh_08.png",
+                tho: "Một nụ cười nở trên môi<br>Gieo mầm tử tế, nhận đời an vui.",
+                ynhia: "Năng lượng tích cực bạn trao đi hôm nay sẽ mang về nhiều sự giúp đỡ và yêu quý bất ngờ từ mọi người."
+            },
+            9: {
+                ten: "QUẺ 09 - NHU THUẬN",
+                img: "ImageForCard/anh_09.png",
+                tho: "Nước trong dòng chảy êm trôi<br>Buông điều nặng trĩu, đón đời nhẹ tênh.",
+                ynhia: "Học cách mềm mỏng và buông bỏ những ấm ức nhỏ nhặt. Tâm tĩnh lặng thì vận may mới có chỗ ghé vào."
+            },
+            10: {
+                ten: "QUẺ 10 - TƯƠNG NGỘ",
+                img: "ImageForCard/anh_10.png",
+                tho: "Mặt hồ phẳng lặng không sâu<br>Tri âm tương ngộ, bắc cầu duyên may.",
+                ynhia: "Mối quan hệ bạn bè hoặc tình cảm có chuyển biến tích cực. Có người đang âm thầm quan tâm và trân trọng bạn."
+            },
+            11: {
+                ten: "QUẺ 11 - TRỰC GIÁC",
+                img: "ImageForCard/anh_11.png",
+                tho: "Soi gương bóng nước trong ngần<br>Lắng nghe tiếng gọi xuất phát từ lòng.",
+                ynhia: "Hãy tin vào trực giác và lựa chọn đầu tiên của bạn, câu trả lời đã nằm sẵn trong bạn."
+            },
+            12: {
+                ten: "QUẺ 12 - ĐẮC LỢI",
+                img: "ImageForCard/anh_12.png",
+                tho: "Đất lành ươm hạt mầm xanh<br>Cần cù chăm bón ắt thành mùa vui.",
+                ynhia: "Tài chính và công việc vào guồng ổn định. Mọi công sức đầu tư đều mang lại giá trị thực tế rõ ràng."
+            },
+            13: {
+                ten: "QUẺ 13 - VỮNG CHÃI",
+                img: "ImageForCard/anh_13.png",
+                tho: "Rễ sâu bám chặt đất dày<br>Bão giông dẫu lớn chẳng lay ngọn cành.",
+                ynhia: "Nền tảng bản thân đã đủ vững. Đừng lo lắng trước các thử thách đánh giá, bạn hoàn toàn làm chủ được tình thế."
+            },
+            14: {
+                ten: "QUẺ 14 - LỘC MAY (NHẬN QUÀ ẨM THỰC)",
+                img: "ImageForCard/anh_14.png",
+                tho: "Lộc biếc hoa nở hiên nhà<br>Mời dùng chút ngọt đậm đà quẻ hương.",
+                ynhia: "Thẻ trúng thưởng ẩm thực. Mang thẻ này tới bàn Trưng bày đặc sản để nhận 01 phần Bánh nhãn hoặc Kẹo Siu Châu Nam Định."
+            },
+            15: {
+                ten: "QUẺ 15 - ĐẠI CÁT (NHẬN QUÀ KỶ NIỆM)",
+                img: "ImageForCard/anh_15.png",
+                tho: "Đan sợi tâm đức vuông tròn<br>Dệt nên di sản vàng son rạng ngời.",
+                ynhia: "Thẻ may mắn dự án. Quét mã QR mặt sau để lưu cẩm nang Phủ Dầy và nhận 01 quà tặng kỷ niệm (bookmark/sticker) từ ban tổ chức."
+            }
+        };
+
+        function renderQue(soQue) {
+            const wrapper = document.getElementById('resultWrapper');
+            const que = dataQue[soQue];
+
+            if (que) {
+                document.getElementById('cardTitle').innerText = que.ten;
+                document.getElementById('cardPoem').innerHTML = `"${que.tho}"`;
+                document.getElementById('cardMeaning').innerText = que.ynhia;
+                
+                // Cập nhật ảnh tương ứng của quẻ
+                if (que.img) {
+                    document.getElementById('cardImage').src = que.img;
+                }
+
+                wrapper.classList.remove('d-none');
+                wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                alert(`Vui lòng nhập số thẻ quẻ từ 1 đến 15!`);
+                wrapper.classList.add('d-none');
+            }
+        }
+
+        function traQueTheoSo() {
+            const inputVal = document.getElementById('queInput').value;
+            if (!inputVal) {
+                alert('Vui lòng nhập số thẻ quẻ (từ 1 đến 15)!');
+                return;
+            }
+            const soQue = Number(inputVal);
+            if (!Number.isInteger(soQue) || soQue < 1 || soQue > 15) {
+                alert('Vui lòng nhập số nguyên từ 1 đến 15!');
+                return;
+            }
+            renderQue(soQue);
+        }
+
+        function bocNgauNhien() {
+            const icon = document.getElementById('ongXamIcon');
+            const button = document.getElementById('randomQueButton');
+            if (button.disabled) return;
+            button.disabled = true;
+            const wrapper = document.getElementById('resultWrapper');
+            
+            wrapper.classList.add('d-none');
+            icon.classList.add('shake-anim');
+
+            setTimeout(() => {
+                icon.classList.remove('shake-anim');
+                button.disabled = false;
+                const keys = Object.keys(dataQue);
+                const randomKey = keys[Math.floor(Math.random() * keys.length)];
+                document.getElementById('queInput').value = randomKey;
+                renderQue(randomKey);
+            }, 700);
+        }
+
+        function clickTag(soQue) {
+            document.getElementById('queInput').value = soQue;
+            renderQue(soQue);
+        }
+    </script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

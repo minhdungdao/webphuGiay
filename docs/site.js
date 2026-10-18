@@ -5,6 +5,7 @@
     ['quantheditich.html', 'Quần thể di tích'],
     ['nghile.html', 'Nghi lễ & Hầu đồng'],
     ['kinh-nghiem.html', 'Kinh nghiệm đi lễ'],
+    ['boc-que.html', 'Bốc quẻ'],
     ['lien-he.html', 'Liên hệ']
   ];
   const nav = document.createElement('div');
